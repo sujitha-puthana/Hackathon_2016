@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <script src="css/styles.css"></script>
+
+</head>
+
+<style type="text/css">
+    .topcorner{
+        position:absolute;
+        top: 25px;
+        right:30px;
+        border: 2px solid;
+        border-radius: 25px;
+        height:50px;
+        width:100px;
+        outline:0;
+        background-color: white;
+    }
+    .logincss {
+        position:absolute;
+        top: 25px;
+        right:150px;
+        border: 2px solid;
+        border-radius: 25px;
+        height:50px;
+        width:100px;
+        outline:0;
+        background-color: white;
+
+    }
+
+    #cf {
+        position:relative;
+        height:281px;
+        width:450px;
+        margin:0 auto;
+    }
+
+    #cf img {
+        position:absolute;
+        left:0;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+    }
+
+    #cf img.top:hover {
+        opacity:0;
+    }
+    #contain
+    {
+        width: 800px;
+        height:400px;
+    }
+    #first {
+        width:400px;
+        float: left;
+        height: 200px;
+    }
+    #second {
+        width: 300px;
+        float: right;
+        height: 80px;
+    }
+
+</style>
+<body>
+<div style="height:25%;width: auto;background-color: black">
+    <img src="img/hrblock.png"/>
+    <div >
+        <button class="topcorner" type="submit" value="Register" onclick=go()>Register</button>
+        <button class="logincss" type="submit" value="Login" onclick=login()>Login</button>
+
+        <script>
+            function go() {
+                window.location='register.html';
+            }
+            function login() {
+             window.location = "login.html";
+            }
+        </script>
+    </div>
+
+</div>
+
+<!--<div id="cf" style="margin-top: 5px;margin-left:0%">-->
+    <!--<img  class="bottom" src="img/1.jpeg" />-->
+    <!--<img  class="top" src="img/2.jpeg" />-->
+<!--</div>-->
+<!--<div style="margin-right: 5px">-->
+    <!--WELCOME TO H&R COMMUNITY FORUM-->
+<!--</div>-->
+
+<div id="first">
+    <div id="cf">
+        <img  class="bottom" src="img/h-r-block_image-2.jpg" />
+        <img  class="top" src="img/online-forums-community%20(1).jpg" />
+    </div>
+
+</div>
+<div id="second" style="text-align: center;margin-top:20%;font-family:Impact,Charcoal,sans-serif;font-size: 40px">
+    WELCOME TO <br>
+    H&R COMMUNITY FORUM
+</div>
+</body>
+
+</html>

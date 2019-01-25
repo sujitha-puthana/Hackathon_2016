@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="large-12 columns">
+        <h1>Welcome to the community</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="panel">
+        <h4>{{post.topicName}}</h4><span>Author: {{post.personName}}</span>
+        <p>{{post.body}}</p>
+    </div>
+</div>
+<div class="row">
+    <div>
+        <h3>Comments:</h3>
+        <div class="large-12 columns">
+            <div class="panel callout radius" ng-repeat="postComment in postComments">
+                <p><span class="comment-user">{{postComment.user}}</span> - <span class="comment-date">{{postComment.created | date : 'medium' }}</span></p>
+                <p>{{postComment.comment}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="large-12 columns">
+        <label>Your Name</label>
+        <input type="text" ng-model="comments.user"/>
+    </div>
+    <div class="large-12 columns">
+        <label>Comment</label>
+        <input type="text" ng-model="comments.comment"/>
+    </div>
+    <button class="medium success button" ng-click="postComment()">Post comment</button>
+    <a class="medium alert button" href="#/">Go to home page</a>
+</div>

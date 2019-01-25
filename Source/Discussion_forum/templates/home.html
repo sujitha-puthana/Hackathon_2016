@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="large-12 columns">
+        <h1>Welcome to the community</h1>
+    </div>
+</div>
+
+<div class="row">
+
+
+    <div class="form-group">
+
+        <div class="input-group">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </div>
+            <input type="text" ng-model="searchTask" class="form-control" placeholder="Search">
+        </div>
+
+    </div>
+
+
+    <a href="#create" class="medium success button">Create a topic</a>
+    <!--for spacing-->
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!--for spacing-->
+    <a href="login.html" class="medium success button">Logout</a>
+
+    <div class="large-12 columns panel" ng-repeat="topic in topics | filter: searchTask | orderBy: 'topic'" ng-href="">
+        <a href="#/viewPost/{{topic.$id}}">
+            <h4>{{topic.topicName}}</h4><span class="post-user">{{topic.personName}}</span> -
+            <span class="post-date">{{topic.created | date : 'short'}}</span>
+            <p>{{topic.body}}</p>
+        </a>
+    </div>
+</div>
